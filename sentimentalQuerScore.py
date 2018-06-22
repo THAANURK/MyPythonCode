@@ -32,7 +32,7 @@ sentiment = TextBlob(question)
 
 print("Sentiment Score: ", sentiment.sentiment.polarity)
 
-writer = csv.writer(open("/Users/prasunsarkar/Desktop/ProducsData/Kurthi/kidstuffsbae.csv", 'a'))
+writer = csv.writer(open("/Users/ShreeThaanu/yourCSVFileHere", 'a'))
 writer.writerow([question])
 
 if(sentiment.sentiment.polarity < 0):
@@ -54,4 +54,3 @@ for syn in wordnet.synsets(result):
 			antonyms.append(l.antonyms()[0].name())
 myRandomValue = random.choice(synonyms)
 print(myRandomValue)
-
